@@ -11,22 +11,20 @@ This application has
     - There are two tables used- Article and Notes.
 *************************************************************************************************
 Burger application has the following file structure
-Root(Burger)
+Root(MongoScrape)
     |
     config
         |
-        connection.js
-        orm.js
+        database.js
     controllers
         |
-        burgercontroller.js
-    db
-        |
-        schema.SQL
-        seed.SQL
+        articles.js
+        notes.js
+        routes.js
     models
         |
-        burger.js
+        Articles.js
+        Note.js
     public
         |
         public
@@ -38,34 +36,52 @@ Root(Burger)
                     style.css
                 image
                     |
-                    burger1.jpg
-                    burger4.jpg
-                    burger6.jpg
                 javascript
+                    |
+                    app.js
+                    scrape.js
     views
         |
         layouts
             |
             main.handlebars
-        index.handlebars
+            empty.handlebars
+            index.handlebars
+            saved.handlebars
     server.js
     node_modules    
     package.JSON
     package-lock.JSON
     README
 *************************************************************************************************
-![](https://github.com/JPillai2018/Burger/blob/master/public/assets/screenshots/image1.PNG)
+News Scrape  app uses a Mongo DB database. To run we have to start Mongo D and Mongo
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/CMD-MONGO-1.PNG)
 *************************************************************************************************
-Burger app uses a MySQL database
-![](https://github.com/JPillai2018/Burger/blob/master/public/assets/screenshots/image2.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/CMD-MONGOD-2.PNG)
 *************************************************************************************************
-Burger App demo is as follows. This app runs on port 8080. On Command line run node server.js. 
-![](https://github.com/JPillai2018/Burger/blob/master/public/assets/screenshots/image3.PNG)
-On the browser use the url http://localhost:8080.
-![](https://github.com/JPillai2018/Burger/blob/master/public/assets/screenshots/image4.PNG)
-1. To start the application, enter a burger name of your choice in the text box area.
-![](https://github.com/JPillai2018/Burger/blob/master/public/assets/screenshots/image5.PNG)
-2. And click the "Place Order" button. Entered burger name will be displayed on left side of the screen with a button next to it. Button is to devour the burger.
-![](https://github.com/JPillai2018/Burger/blob/master/public/assets/screenshots/image6.PNG)
-3. Enter as many burgers as you would like. Each burger entered will be inserted in to the MySQL database burgers_db, inside burgers table. Each of the "Ready To Eat" burgers will have a status of "Devoured" as false.
-
+Start the application by node Server.js 
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Server-Starting-3.PNG)
+On the browser use the url http://localhost:3000.
+Home screen has a Home button, Scrape articles and Save articles. Also first time list all the previosuly saved articles.
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Home-Screen-4.PNG)
+Click Scrape articles button. All teh articles from the given website will be scraped and displayed ina formatted pattern. with header, summary and link to the full article. Also a save button is available.
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Srape-Articles-5.PNG)
+To save the article, click save button, one ata time.
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Save-Article-6.PNG)
+To view the saved article, click Saved article button
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Go%20to-Saved-Article-7.PNG)
+Saved article can be removed by clicking the saved remove button
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Going-to-Remove-8.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Removed-9.PNG)
+Each of the sabed article, a note can be entered by clicking the add/remove note button
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/View-Add-Notes-10.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Add-Notes-Modal-11.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Add-Notes-Modal-12.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Add-Notes-Modal-13.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Add-Notes-Modal-14.PNG)
+Existing notes for an article can be deleted.
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Going-to-Delete-Notes-15.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/After-Deleting-Notes-16.PNG)
+Following are a snapshot of the database.
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Article%20Database-17.PNG)
+![](https://github.com/JPillai2018/MongoScrape/blob/master/public/assets/img/Notes-Table-18.PNG)
