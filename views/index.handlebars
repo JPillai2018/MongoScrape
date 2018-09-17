@@ -1,0 +1,25 @@
+<div class="articles container">
+
+    {{#each articles }}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{title}}</h3>
+      </div>
+      <div class="panel-body">
+        <div class="snipText">
+          <a href="{{link}}" class="storyLink" target="_blank">
+              {{this.snipText}}  
+          </a>
+          <div class="imgBox">
+            {{!-- <img src="{{imageLink}}" alt="" class="storyImg pull-right"" height="150"> --}}
+          </div>
+        </div>  
+        <h5 class="byLine">By: {{byLine}}</h5> 
+        <button data-id={{_id}} class="btn btn-danger pull-right save-article">Save Article</button>
+      </div>
+    </div>
+    <br />
+
+    {{/each}}
+
+</div>

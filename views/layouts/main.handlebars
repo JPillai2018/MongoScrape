@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>MongoScrape</title>
+       	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab" rel="stylesheet">
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">MongoScrape</a>
+				</div>
+				<form class="navbar-form navbar-right" action="/saved" method="get">
+					<button class="btn btn-danger saved-article">Saved Articles</button>
+				</form>
+				<form class="navbar-form navbar-right" action="/api/fetch" method="get">
+					<button class="btn btn-danger scrape">Scrape New Articles!</button>
+				</form>
+				<form class="navbar-form navbar-right" action="/" method="get">
+					<button class="btn btn-danger ">Home</button>
+				</form>
+			</div>
+		</nav>
+		<div class="main-img-container">
+			<div class="jumbotron">
+            	<h1 class="display-h1">NewScrape Stand</h1>
+            	<div class="jumbo-theme">
+                    <hr class="my-4" >
+        		</div>
+				<h3 class="display-h1">News Archives - Space</h3> <h5>from</h5><h4>The Verge</h4>
+        	</div>
+		</div>
+
+
+		{{{ body }}}
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    	<script src="assets/js/app.js"></script>
+
+	</body>
+</html>
