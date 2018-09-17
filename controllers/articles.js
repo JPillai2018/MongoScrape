@@ -34,7 +34,7 @@ module.exports = {
       });
   },
   update: function(query, cb) {
-    // saves or unsaves an article depending on the user query comes from the patch request in app.js
+    // Updates and article with save value = True/False- This means item is saved or removed.  
     Article.update({ _id: query.id }, {
       $set: {saved: query.saved}
     }, {}, cb);
