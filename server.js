@@ -21,13 +21,9 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(process.cwd() + "/public"));
 
 // Database configuration with mongoose
-var databaseUri = "mongodb://localhost/mongoosearticles";
-
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-} else {
-  mongoose.connect(databaseUri);
-}
+var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scraper";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 var db = mongoose.connection;
 
