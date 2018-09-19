@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Make public a static dir
-app.use(express.static(process.cwd() + "/public"));
-
+//app.use(express.static(process.cwd() + "/public"));
+app.use(express.static("public"));
 // Database configuration with mongoose
 var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scraper";
 mongoose.Promise = Promise;
