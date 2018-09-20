@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({
 //app.use(express.static(process.cwd() + "/public"));
 app.use(express.static("public"));
 // Database configuration with mongoose
-var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scraper";
+//var MONGODB_URI= process.env.MONGODB_URI || "mongodb://localhost/scraper";
+var MONGODB_URI= process.env.MONGODB_URI || "mongodb://jpillaiGT2008:Password12345@ds159772.mlab.com:59772/mongoscrape";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
